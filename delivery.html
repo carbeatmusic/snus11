@@ -9,29 +9,41 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <img src="logo.png" alt="Логотип" class="logo">
-            <h1>Интернет-магазин</h1>
-            <nav>
-                <a href="index.html">Главная</a>
-                <a href="delivery.html">Правила доставки</a>
-                <a href="https://t.me/your_telegram_channel" target="_blank">
-                    <img src="telegram.png" alt="Telegram" class="telegram-icon">
-                </a>
-            </nav>
-        </div>
+        
     </header>
+        <div class="delivery-info">Доставка от 99р</div>
+    <div class="red">.</div>
     <div id="content" style="display: none; width: 100%;">
         <div class="main-container">
-            <h2>Правила доставки</h2>
-            <п>Здесь вы можете описать правила и условия доставки ваших товаров. Например:</п>
+            <h2>❓КАК ПРОИСХОДИТ ДОСТАВКА</h2>
+            
             <ul>
-                <li>Сроки доставки</li>
-                <li>Стоимость доставки</ли>
-                <ли>Условия возврата и обмена</ли>
-                <ли>Контактная информация для вопросов по доставке</ли>
-            </ул>
+                <li>▶️Доставка  будет осуществляться через яндекс доставку </li>
+                <li>▶️После выбора товара,выбора ближайшей к вам точки, уточнения наличия, вы оплачиваете полную стоимость самого товара и также доставки до вашего адреса</li>
+                <li>▶️После оплаты мы вам высылаем товар на ваш адрес</li>
+                <li>🚕 Заказы и доставка осуществляется с 10:30 до 21:30</li>
+                <li>⚡️Заказать тут <a hreh="">TELEGRAM</a></li>
+            </ul>
         </div>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('header/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('header').innerHTML = data;
+                // Инициализация скриптов и стилей после загрузки header
+                const script = document.createElement('script');
+                script.src = 'header/header.js';
+                document.body.appendChild(script);
+
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'header/header.css';
+                document.head.appendChild(link);
+            })
+            .catch(error => console.error('Error loading header:', error));
+    });
+</script>
 </body>
 </html>
