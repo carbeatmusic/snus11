@@ -287,7 +287,6 @@ header {
 
     .header-content {
         
-                flex-direction: row;
         align-items: flex-start;
     }
 
@@ -296,7 +295,8 @@ header {
     }
 
     .hamburger-menu {
-       display: flex;
+        display: block;
+        padding: 5%;
     }
 
     .card {
